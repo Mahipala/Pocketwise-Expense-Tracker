@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PocketWise | Expense Tracker</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="brandmark">PW</span><span>PocketWise</span></div><nav><a class="active" href="#dashboard">Dashboard</a><a href="#transactions">Transactions</a></nav><div class="user"><span class="avatar">U</span><span>My Wallet</span></div></header>
+<main class="container" id="dashboard">
+<section class="welcome"><div><p class="kicker">PERSONAL FINANCE</p><h1>Expense Tracker</h1><p class="sub">Know where your money goes. Make every rupee count.</p></div><div class="date-pill" id="today"></div></section>
+<section class="summary"><article class="card total"><div class="card-top"><span>Total expenses</span><span class="icon">₹</span></div><h2 id="total">₹0.00</h2><small>All recorded spending</small></article><article class="card count"><div class="card-top"><span>Transactions</span><span class="icon">↗</span></div><h2 id="count">0</h2><small>Expense entries</small></article><article class="card average"><div class="card-top"><span>Average expense</span><span class="icon">◉</span></div><h2 id="average">₹0.00</h2><small>Per transaction</small></article></section>
+<section class="content-grid"><section class="panel add-panel"><div class="panel-title"><h2>Add expense</h2><span class="mini-badge">New entry</span></div><form id="expenseForm"><label for="description">Expense title</label><input id="description" maxlength="70" placeholder="e.g. Groceries, lunch" required><div class="form-row"><div><label for="amount">Amount (₹)</label><input id="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required></div><div><label for="category">Category</label><select id="category"><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Health</option><option>Education</option><option>Entertainment</option><option>Other</option></select></div></div><label for="date">Date</label><input id="date" type="date" required><button class="btn-primary" type="submit">+ Add expense</button></form></section>
+<section class="panel breakdown"><div class="panel-title"><h2>Spending overview</h2><span class="mini-badge">By category</span></div><div id="categoryList" class="category-list"><p class="muted empty-cat">Add transactions to see categories.</p></div></section></section>
+<section class="panel transactions" id="transactions"><div class="panel-title"><h2>Recent transactions</h2><span id="transactionBadge" class="mini-badge">0 records</span></div><div class="filter-row"><input id="search" placeholder="Search expenses..." aria-label="Search expenses"><select id="filterCategory"><option value="All">All categories</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Health</option><option>Education</option><option>Entertainment</option><option>Other</option></select></div><div class="table-wrap"><table><thead><tr><th>DESCRIPTION</th><th>CATEGORY</th><th>DATE</th><th>AMOUNT</th><th></th></tr></thead><tbody id="transactionRows"></tbody></table><div id="emptyState" class="empty">No expenses yet. Add your first expense above.</div></div></section>
+<footer> PocketWise Expense Tracker · Demonstration of a Linked List in C <span>Built for a Data Structures project</span></footer>
+</main><script src="app.js"></script>
+</body></html>
